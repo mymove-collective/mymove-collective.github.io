@@ -1,0 +1,22 @@
+.content-with-left-image {
+    margin-top: 24px;
+    display: flex;
+
+    h2 {
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    .left-column {
+        display: block;
+        text-align: center;
+        background: #f0f0f0;
+        width: 300px;
+        height: 180px;
+    }
+
+    .right-column {
+        flex: 1;
+        padding-left: 1.5rem;
+    }
+}

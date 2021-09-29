@@ -5,6 +5,7 @@ import { Team } from './Team';
 import { SystemInformation } from './SystemInformation';
 import { Acknowledgment } from './Acknowledgment';
 import './MainPage.scss';
+import { Concept } from './Concept';
 
 //import loopmp4 from '../../../assets/teaser-loop.mp4';
 
@@ -56,6 +57,8 @@ export const MainPage = () => {
                 </div>
             </div>
         </div>
+
+        <Concept />
 
         <Publication />
         <Team />

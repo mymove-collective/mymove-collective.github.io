@@ -9,7 +9,11 @@ $main-element-shadow: 0px 3px 20px rgba(62, 106, 128, 0.2);
 
     .description-content-container {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
+
+        padding: 2.5rem;
+        border-radius: $main-element-border-radius;
+        box-shadow: $main-element-shadow;
 
 
         @media (max-width: $container-max-widths-lg) {
@@ -22,10 +26,7 @@ $main-element-shadow: 0px 3px 20px rgba(62, 106, 128, 0.2);
     .teaser-image {
 
         width: 350px;
-        height: 500px;
-        display: block;
         text-align: center;
-        background: #f0f0f0;
 
 
         @media (max-width: $container-max-widths-lg) {
@@ -41,9 +42,6 @@ $main-element-shadow: 0px 3px 20px rgba(62, 106, 128, 0.2);
 
     .description-text-container {
         flex: 1;
-        padding: 2.5rem;
-        border-radius: $main-element-border-radius;
-        box-shadow: $main-element-shadow;
         margin-left: 2rem;
 
 

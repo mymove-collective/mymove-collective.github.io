@@ -1,6 +1,9 @@
 .content-with-left-image {
     margin-top: 24px;
     display: flex;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
 
     h2 {
         font-weight: 600;
@@ -8,15 +11,18 @@
     }
 
     .left-column {
-        display: block;
         text-align: center;
-        background: #f0f0f0;
-        width: 300px;
-        height: 180px;
+        width: 350px;
+        margin-left: 1rem;
+        margin-right: 1.5rem;
     }
 
     .right-column {
         flex: 1;
         padding-left: 1.5rem;
+    }
+
+    &:last-of-type {
+        border-bottom: initial;
     }
 }

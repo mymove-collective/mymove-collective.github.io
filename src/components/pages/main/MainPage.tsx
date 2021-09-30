@@ -22,12 +22,11 @@ export const MainPage = () => {
                 <div className="description-content-container">
 
                     <div className="teaser-image">
-                        Placeholder for Teaser Image
+                        <img src={require("../../../assets/images/web-figure-teaser.svg")}/>
                     </div>
                     <div className="description-text-container">
                         <p className="description-text">
-                            <b>MyMove</b> is a collaborative NSF research project from University of Maryland and the Pennsylvania State University.
-                            This project aims to <i>design and build personalized activity tracking systems that better match older adults' lifestyle and physiological characteristics</i>, with a long-term goal of supporting older adults to actively engage in their physical activity.
+                            The <b>MyMove</b> project aims to <i>design and build personalized activity tracking systems that better match older adults' lifestyle and physiological characteristics</i>, with a long-term goal of supporting older adults to actively engage in their physical activity.
                         </p>
                         <p>
                             Specifically, we devise '<strong>teachable interfaces</strong>,' a mechanism that enables people to capture data and tailor a machine learning algorithm with their training examples. Combining teachable interfaces with activity tracking, we will design and develop MyMove, which will serve dual purposes:
@@ -36,8 +35,23 @@ export const MainPage = () => {
                                 <li> Improving the system’s accuracy by enabling people to tune it to their own idiosyncrasies.</li>
                             </ol>
                         </p>
+                    </div>
 
-                        <div className="description-metadata-container">
+                </div>
+            </div>
+        </div>
+
+        <Concept />
+
+        <Publication />
+        <Team />
+        <Acknowledgment />
+    </>
+}
+
+/*
+
+<div className="description-metadata-container">
                             <div className="metadata-title">
                                 Keywords
                             </div>
@@ -52,16 +66,5 @@ export const MainPage = () => {
 
                         </div>
 
-                    </div>
 
-                </div>
-            </div>
-        </div>
-
-        <Concept />
-
-        <Publication />
-        <Team />
-        <Acknowledgment />
-    </>
-}
+*/

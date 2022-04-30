@@ -3,7 +3,7 @@ import { MainPage } from 'components/pages/main/MainPage'
 import { Chi2021Page} from 'components/pages/main/Chi2021Page'
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link,
 } from "react-router-dom";
@@ -17,18 +17,11 @@ function App() {
       <div className="App">
         <Header />
         <div id="content">
-          <Switch>
-            <Route path="/privacy">
-              <PrivacyPolicyMain />
-            </Route>
-            <Route path="/chi2021">
-              <Chi2021Page/>
-            </Route>
-
-            <Route path="/">
-              <MainPage />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/privacy" element={<PrivacyPolicyMain />}/>
+            <Route path="/chi2021" element={<Chi2021Page/>} />
+            <Route path="/" element={<MainPage />}/>
+          </Routes>
 
           <Footer />
         </div>

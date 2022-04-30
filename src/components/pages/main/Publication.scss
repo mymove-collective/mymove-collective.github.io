@@ -1,8 +1,16 @@
-a.doi{
+a.doi, a.pdf{
     background: #5dbcd8;
     padding: 0 0.5rem;
     border-radius: 0.3rem;
     color: white;
     font-weight: 600;
     margin-left: 0.75rem;
+}
+
+a.doi{
+    background: #5dbcd8;
+}
+
+a.pdf{
+    background: #f06868;
 }

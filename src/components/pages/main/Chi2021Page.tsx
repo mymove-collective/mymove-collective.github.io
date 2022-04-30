@@ -3,7 +3,6 @@ import { Section } from '../../Section';
 import { Video } from '../../Video';
 import { Team } from './Team';
 import './Chi2021Page.scss';
-import { Link } from 'react-router-dom';
 
 export const Chi2021Page = () => {
     return <>

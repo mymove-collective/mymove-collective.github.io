@@ -1,11 +1,10 @@
 import React from 'react';
-import { Video } from '../../Video';
 import { Publication } from './Publication';
 import { Team } from './Team';
-import { SystemInformation } from './SystemInformation';
 import { Acknowledgment } from './Acknowledgment';
 import './MainPage.scss';
 import { Concept } from './Concept';
+import teaser from "../../../assets/images/web-figure-teaser.svg"
 
 //import loopmp4 from '../../../assets/teaser-loop.mp4';
 
@@ -22,7 +21,7 @@ export const MainPage = () => {
                 <div className="description-content-container">
 
                     <div className="teaser-image">
-                        <img src={require("../../../assets/images/web-figure-teaser.svg")}/>
+                        <img src={teaser}/>
                     </div>
                     <div className="description-text-container">
                         <p className="description-text">

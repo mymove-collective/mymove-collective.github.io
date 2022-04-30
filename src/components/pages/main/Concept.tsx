@@ -2,11 +2,12 @@ import React from 'react'
 import { Section } from '../../Section'
 import './Concept.scss'
 
+
 export const Concept = () => {
     return <Section title="Why We Do This Research" hashId="motivation">
         <div className="content-with-left-image">
             <div className="left-column">
-                <img src={require("../../../assets/images/web-figure-motiv-1.svg")}/>
+                <img src={require("../../../assets/images/web-figure-motiv-1.svg").default}/>
             </div>
             <div className="right-column">
                 <h2>Existing activity recognition/tracking technologies are not well-suited for older adults.</h2>
@@ -18,7 +19,7 @@ export const Concept = () => {
 
         <div className="content-with-left-image">
             <div className="left-column">
-                <img src={require("../../../assets/images/web-figure-motiv-2.svg")}/>
+                <img src={require("../../../assets/images/web-figure-motiv-2.svg").default}/>
             </div>
             <div className="right-column">
                 <h2>Model personalization is essential to better match their individualized lifestyles and patterns, but it requires each user's activity data.</h2>
@@ -30,7 +31,7 @@ export const Concept = () => {
 
         <div className="content-with-left-image">
             <div className="left-column">
-                <img src={require("../../../assets/images/web-figure-motiv-3.svg")}/>
+                <img src={require("../../../assets/images/web-figure-motiv-3.svg").default}/>
             </div>
             <div className="right-column">
                 <h2>Teachable interfaces + self-monitoring = Personalized activity trackers that are accessible by older adults!</h2>

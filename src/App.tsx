@@ -1,6 +1,6 @@
 import React from 'react';
 import { MainPage } from 'components/pages/main/MainPage'
-import { Chi2021Page} from 'components/pages/main/Chi2021Page'
+import { Chi2022Page} from 'components/pages/main/Chi2022Page'
 import {
   BrowserRouter as Router,
   Routes,
@@ -19,7 +19,7 @@ function App() {
         <div id="content">
           <Routes>
             <Route path="/privacy" element={<PrivacyPolicyMain />}/>
-            <Route path="/chi2021" element={<Chi2021Page/>} />
+            <Route path="/chi2022" element={<Chi2022Page/>} />
             <Route path="/" element={<MainPage />}/>
           </Routes>
 

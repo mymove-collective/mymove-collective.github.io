@@ -8,7 +8,8 @@ const papers = [
         title: "MyMove: Facilitating Older Adults to Collect In-Situ Activity Labels on a Smartwatch with Speech",
         description: "ACM CHI 2022, Article 416, Pages 1–21.",
         doi: "https://doi.org/10.1145/3491102.3517457",
-        pdf: "https://mymove-collective.github.io/mymove-chi22-preprint.pdf"
+        pdf: "https://mymove-collective.github.io/mymove-chi22-preprint.pdf",
+        link: {title: "Details", url:"/chi2022"}
     },
     
     {

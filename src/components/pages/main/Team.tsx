@@ -2,7 +2,7 @@ import React from 'react';
 import './Team.scss';
 import { Section } from '../../Section';
 
-const blee = {
+export const blee = {
     role: "Contributing Researcher",
     name: "Bongshin Lee",
     title: "Sr. Principal Researcher",
@@ -12,7 +12,7 @@ const blee = {
     thumb: require("../../../assets/portraits/author_bongshin.png")
 }
 
-const echoe = {
+export const echoe = {
     role: "Principal Investigator",
     name: "Eun Kyoung Choe",
     title: "Associate Professor",
@@ -23,7 +23,7 @@ const echoe = {
 }
 
 
-const david = {
+export const david = {
     role: "Principal Investigator",
     name: "David E. Conroy",
     title: "Professor",
@@ -33,7 +33,7 @@ const david = {
     thumb: require("../../../assets/portraits/david_portrait.jpg")
 }
 
-const hernisa = {
+export const hernisa = {
     role: "Co-Principal Investigator",
     name: "Hernisa Kacorri",
     title: "Assistant Professor",
@@ -43,7 +43,7 @@ const hernisa = {
     thumb: require("../../../assets/portraits/hernisa_portrait.jpg")
 }
 
-const margaret = {
+export const margaret = {
     role: "Research Consultant",
     name: "Margaret Danilovich",
     title: "Senior Director",
@@ -53,7 +53,7 @@ const margaret = {
     thumb: require("../../../assets/portraits/margaret_portrait.jpg")
 }
 
-const amanda = {
+export const amanda = {
     role: "Co-Principal Investigator",
     name: "Amanda Lazar",
     title: "Assistant Professor",
@@ -63,18 +63,18 @@ const amanda = {
     thumb: require("../../../assets/portraits/amanda_portrait.jpg")
 }
 
-const yhkim = {
+export const yhkim = {
     role: "Contributing Researcher",
     name: "Young-Ho Kim",
     title: "Postdoctoral Associate",
     affiliation: "University of Maryland",
-    email: "yghokim (at) umd.edu",
+    email: "yghokim (at) younghokim.net",
     web: "http://younghokim.net",
     thumb: require("../../../assets/portraits/yhkim_portrait.jpg")
 }
 
 
-const diana = {
+export const diana = {
     role: "Contributing Researcher",
     name: "Diana Chou",
     title: "Master Student",
@@ -84,7 +84,7 @@ const diana = {
     thumb: require("../../../assets/portraits/diana_portrait.jpg")
 }
 
-const sabahat = {
+export const sabahat = {
     role: "Contributing Researcher",
     name: "Sabahat Fatima",
     title: "Research Software Engineer",
@@ -98,11 +98,12 @@ const sabahat = {
 
 const team = [echoe, david, amanda, hernisa, margaret, yhkim, diana, sabahat, blee]
 
-export const Team = () => {
-    return <Section title="Research Team" hashId="team">
+export const Team = (props: {title?: string, team?: Array<any>, hideRole?: boolean}) => {
+    return <Section title={props.title || "Research Team"} hashId="team">
+        <p style={{fontStyle: "italic"}}><small>Note that the affiliations of the authors are based on the period of participation in the project and <u>may not reflect the latest information.</u></small></p>
         <div className="members">
             {
-                team.map(member => {
+                (props.team || team).map(member => {
 
                     const content = <div className="member_content">
                         <div className="thumb">
@@ -112,7 +113,9 @@ export const Team = () => {
                             <div className="name">
                                 {member.name}
                             </div>
-                            <div className="role">{member.role}</div>
+                            {
+                                props.hideRole !== true ? <div className="role">{member.role}</div> : null
+                            }
                             <div className="description">
                                 {member.title}<br />
                                 {member.affiliation}<br />

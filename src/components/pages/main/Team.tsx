@@ -123,7 +123,7 @@ export const sungjin = {
     title: "PhD Student",
     affiliation: "University of Maryland",
     email: "sungjin (at) umd.edu",
-    web: "https://sites.google.com/view/sungjind",
+    web: "https://sites.google.com/view/sungjin",
     thumb: require("../../../assets/portraits/sungjin_portrait.jpg")
     
 }

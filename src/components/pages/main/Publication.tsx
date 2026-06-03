@@ -25,7 +25,7 @@ const papers = [
         title: "From Verbal Reports to Personalized Activity Trackers: Understanding the Challenges of Ground Truth Data Collection with Older Adults in the Wild",
         description: "ACM IMWUT 2025, Pages 1–33.",
         doi: "https://doi.org/10.1145/3731749",
-        pdf: "https://mymove-collective.github.io/ground-truth-imwut25.pdf",
+        pdf: "https://mymove-collective.github.io/groundtruth-imwut25.pdf",
     },
 
     {

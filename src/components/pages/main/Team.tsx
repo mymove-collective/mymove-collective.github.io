@@ -15,7 +15,7 @@ export const blee = {
 export const echoe = {
     role: "Principal Investigator",
     name: "Eun Kyoung Choe",
-    title: "Associate Professor",
+    title: "Professor",
     affiliation: "University of Maryland",
     email: "choe (at) umd.edu",
     web: "http://eunkyoungchoe.com",
@@ -36,7 +36,7 @@ export const david = {
 export const hernisa = {
     role: "Co-Principal Investigator",
     name: "Hernisa Kacorri",
-    title: "Assistant Professor",
+    title: "Associate Professor",
     affiliation: "University of Maryland",
     email: "hernisa (at) umd.edu",
     web: "https://terpconnect.umd.edu/~hernisa/",
@@ -56,7 +56,7 @@ export const margaret = {
 export const amanda = {
     role: "Co-Principal Investigator",
     name: "Amanda Lazar",
-    title: "Assistant Professor",
+    title: "Associate Professor",
     affiliation: "University of Maryland",
     email: "lazar (at) umd.edu",
     web: "https://amandalazar.net/",
@@ -95,8 +95,53 @@ export const sabahat = {
     
 }
 
+export const yiwen = {
+    role: "Contributing Researcher",
+    name: "Yiwen Wang",
+    title: "PhD Student",
+    affiliation: "University of Maryland",
+    email: "yw7615 (at) umd.edu",
+    web: "https://yiwenmollyw.github.io/",
+    thumb: require("../../../assets/portraits/yiwen_portrait.jpg")
+    
+}
 
-const team = [echoe, david, amanda, hernisa, margaret, yhkim, diana, sabahat, blee]
+export const hossein = {
+    role: "Contributing Researcher",
+    name: "Hossein Khayami",
+    title: "PhD Student",
+    affiliation: "University of Maryland",
+    email: "khayami (at) umd.edu",
+    web: undefined,
+    thumb: require("../../../assets/portraits/hossein_portrait.jpg")
+    
+}
+
+export const sungjin = {
+    role: "Contributing Researcher",
+    name: "Sungjin Hwang",
+    title: "PhD Student",
+    affiliation: "University of Maryland",
+    email: "sungjin (at) umd.edu",
+    web: "https://sites.google.com/view/sungjind",
+    thumb: require("../../../assets/portraits/sungjin_portrait.jpg")
+    
+}
+
+export const mengy = {
+    role: "Contributing Researcher",
+    name: "Mengying Li",
+    title: "Master Student",
+    affiliation: "University of Maryland",
+    email: "myl99629 (at) umd.edu",
+    web: undefined,
+    thumb: require("../../../assets/portraits/mengy_portrait.jpg")
+    
+}
+
+
+
+const team = [echoe, david, amanda, hernisa, margaret, yhkim, diana, sabahat, blee, yiwen, mengy, hossein, sungjin]
 
 export const Team = (props: {title?: string, team?: Array<any>, hideRole?: boolean}) => {
     return <Section title={props.title || "Research Team"} hashId="team">

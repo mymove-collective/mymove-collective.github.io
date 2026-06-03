@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.1875180c.css",
-    "main.js": "/static/js/main.81f8405a.js",
+    "main.css": "/static/css/main.fa0e47db.css",
+    "main.js": "/static/js/main.61e21013.js",
     "static/media/choe_portrait.png": "/static/media/choe_portrait.f2fbf0540875e65d62be.png",
     "static/media/web-figure-motiv-2.svg": "/static/media/web-figure-motiv-2.126333ca25990e3b166802e0a360ddca.svg",
     "static/media/web-figure-motiv-1.svg": "/static/media/web-figure-motiv-1.5efe5e3c93534a79b633598f7c0b599b.svg",
+    "static/media/mengy_portrait.jpg": "/static/media/mengy_portrait.6c095a073de36ca7a701.jpg",
+    "static/media/hossein_portrait.jpg": "/static/media/hossein_portrait.ed6c7d2551b6d83e4faa.jpg",
     "static/media/web-figure-motiv-3.svg": "/static/media/web-figure-motiv-3.946aa1180d050062e30771e3f1908dae.svg",
     "static/media/web-figure-teaser.svg": "/static/media/web-figure-teaser.1777cb486d90b9658ea253f76b8e3d75.svg",
     "static/media/author_bongshin.png": "/static/media/author_bongshin.211d32fb938eab0aef5a.png",
@@ -14,15 +16,17 @@
     "static/media/amanda_portrait.jpg": "/static/media/amanda_portrait.8cb92aba11ebaadbdfe0.jpg",
     "static/media/yhkim_portrait.jpg": "/static/media/yhkim_portrait.62876d06167a8f08af8d.jpg",
     "static/media/david_portrait.jpg": "/static/media/david_portrait.a7c9850beeef6f09b6f7.jpg",
+    "static/media/sungjin_portrait.jpg": "/static/media/sungjin_portrait.5c6d2fd94327b5ebbf9d.jpg",
+    "static/media/yiwen_portrait.jpg": "/static/media/yiwen_portrait.3ee640d67bebf389046d.jpg",
     "static/media/diana_portrait.jpg": "/static/media/diana_portrait.97ff3cde5d37f3abbc03.jpg",
     "static/media/mymove_horizontal_light.svg": "/static/media/mymove_horizontal_light.0c6b7a0fe49daf729962e55b323a5f15.svg",
     "index.html": "/index.html",
     "static/media/github.svg": "/static/media/github.c18414df8c78db60cdaf97e74647841c.svg",
-    "main.1875180c.css.map": "/static/css/main.1875180c.css.map",
-    "main.81f8405a.js.map": "/static/js/main.81f8405a.js.map"
+    "main.fa0e47db.css.map": "/static/css/main.fa0e47db.css.map",
+    "main.61e21013.js.map": "/static/js/main.61e21013.js.map"
   },
   "entrypoints": [
-    "static/css/main.1875180c.css",
-    "static/js/main.81f8405a.js"
+    "static/css/main.fa0e47db.css",
+    "static/js/main.61e21013.js"
   ]
 }

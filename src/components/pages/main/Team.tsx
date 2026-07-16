@@ -112,7 +112,7 @@ export const hossein = {
     title: "PhD Student",
     affiliation: "University of Maryland",
     email: "khayami (at) umd.edu",
-    web: undefined,
+    web: "https://h-khayami.github.io/",
     thumb: require("../../../assets/portraits/hossein_portrait.jpg")
     
 }

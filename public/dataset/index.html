@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyMove Dataset</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body { font-family: 'Noto Sans', sans-serif; }
+    h1, h2, h3, .title, .subtitle { font-family: 'Google Sans', sans-serif; }
+
+    .hero.is-dark { background-color: #1a1a2e; }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e8e8e8;
+    }
+
+    .publication-title { font-size: 2.4rem; line-height: 1.2; }
+    .publication-authors { font-size: 1.1rem; }
+
+    .link-block a {
+      margin: 0.25rem;
+    }
+
+    .paper-card {
+      border-left: 4px solid #3273dc;
+      padding: 1rem 1.5rem;
+      background: #f8f9fa;
+      margin-bottom: 1rem;
+      border-radius: 0 4px 4px 0;
+    }
+    .paper-card.is-imwut { border-left-color: #23d160; }
+
+    table.dataset-table { font-size: 0.9rem; }
+    table.dataset-table th { background-color: #f5f5f5; }
+
+    .figure-placeholder {
+      background: #f0f0f0;
+      border: 2px dashed #ccc;
+      border-radius: 6px;
+      padding: 3rem;
+      text-align: center;
+      color: #888;
+      font-style: italic;
+      margin: 1.5rem 0;
+    }
+
+    .bibtex-block {
+      background: #f0f0f0;
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      font-size: 0.78rem;
+      margin-top: 0.75rem;
+      white-space: pre;
+      overflow-x: auto;
+      display: none;
+    }
+    .bibtex-block.is-visible { display: block; }
+
+    footer.footer { background-color: #f5f5f5; padding: 2rem; }
+
+    nav.navbar { background-color: #3e4456 !important; box-shadow: 0px 2px 6px rgba(0,0,0,0.15); height: 65px; }
+    nav.navbar .navbar-brand { align-items: stretch; height: 65px; }
+    nav.navbar .navbar-brand .navbar-item { display: flex; align-items: center; padding: 0 1rem; height: 65px; }
+    nav.navbar .navbar-brand .navbar-item img { height: 45px; max-height: none; }
+    nav.navbar .navbar-item { color: #d0d3db; }
+    nav.navbar .navbar-item:hover { color: #ffffff; background-color: rgba(255,255,255,0.1) !important; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar is-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://mymove-collective.github.io/">
+        <img src="mymove_logo.svg" alt="MyMove" style="height: 2.5rem;" />
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#overview">Overview</a>
+        <a class="navbar-item" href="#protocol">Protocol</a>
+        <a class="navbar-item" href="#participants">Participants</a>
+        <a class="navbar-item" href="#devices">Devices</a>
+        <a class="navbar-item" href="#sensors">Sensors</a>
+        <a class="navbar-item" href="#download">Download</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero is-dark" style="padding-top: 4rem;">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title publication-title has-text-white">
+        MyMove Dataset
+      </h1>
+      <h2 class="subtitle has-text-grey-light" style="margin-top: 1rem; font-size: 1.25rem;">
+        Activity Data from Older Adults in the Wild
+      </h2>
+      <div class="publication-authors has-text-grey-light" style="margin-top: 1rem;">
+        13 older adults &nbsp;·&nbsp; 7-day in-the-wild deployment &nbsp;·&nbsp; Smartwatch IMU + Thigh-worn sensor + Verbal reports
+      </div>
+
+      <!-- Buttons -->
+      <div class="link-block" style="margin-top: 2rem;">
+        <a href="../mymove-chi22-preprint.pdf" class="button is-rounded is-dark" target="_blank">
+          <span class="icon"><i class="fas fa-file-pdf"></i></span>
+          <span>CHI 2022 Paper</span>
+        </a>
+        <a href="../groundtruth-imwut25.pdf" class="button is-rounded is-dark" target="_blank">
+          <span class="icon"><i class="fas fa-file-pdf"></i></span>
+          <span>IMWUT 2025 Paper</span>
+        </a>
+        <span class="button is-rounded is-light" style="opacity: 0.45; cursor: not-allowed;" title="Dataset coming soon">
+          <span class="icon"><i class="fas fa-database"></i></span>
+          <span>Dataset (Coming Soon)</span>
+        </span>
+      </div>
+      <p class="has-text-grey-light" style="margin-top: 1.25rem; font-size: 0.9rem;">
+        <span class="icon"><i class="fas fa-clock"></i></span>
+        The dataset is currently being prepared and will be released publicly soon.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Overview -->
+<section class="section" id="overview">
+  <div class="container">
+    <h2 class="section-title">Overview</h2>
+    <div class="columns">
+      <div class="column is-8">
+        <p>
+          The MyMove dataset was collected to support the development of personalized activity tracking technologies for older adults. It contains smartwatch inertial sensor readings, a thigh-worn activity monitor, and self-reported verbal activity labels — collected from 13 older adults in their natural, everyday environments over one week.
+        </p>
+        <p style="margin-top: 1rem;">
+          The dataset supports research on recognizing everyday activities from wearable sensors, enabling older adults to teach their activity trackers, and understanding how real-world activity data from older adults can be collected and validated.
+        </p>
+      </div>
+      <div class="column is-4">
+        <div class="box has-text-centered">
+          <p class="heading">Participants</p>
+          <p class="title">13</p>
+          <hr />
+          <p class="heading">Study Duration</p>
+          <p class="title">7 days</p>
+          <hr />
+          <p class="heading">Total IMU Data</p>
+          <p class="title">941 h</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="title is-5" style="margin-top: 2rem;">Publications</h3>
+
+    <div class="paper-card">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div>
+          <strong>[CHI 2022]</strong> Kim, Y.-H., Chou, D., Lee, B., Danilovich, M., Lazar, A., Conroy, D. E., Kacorri, H., &amp; Choe, E. K. (2022).<br />
+          <em>MyMove: Facilitating Older Adults to Collect In-Situ Activity Labels on a Smartwatch with Speech.</em><br />
+          CHI '22. <a href="../mymove-chi22-preprint.pdf" target="_blank">PDF</a>
+        </div>
+        <button class="button is-small is-light" style="margin-left: 1rem; white-space: nowrap;" onclick="copyBibtex('bibtex-chi22', this)">
+          <span class="icon"><i class="fas fa-copy"></i></span><span>BibTeX</span>
+        </button>
+      </div>
+      <pre id="bibtex-chi22" class="bibtex-block">@inproceedings{kim2022mymove,
+  title     = {MyMove: Facilitating Older Adults to Collect In-Situ Activity Labels on a Smartwatch with Speech},
+  author    = {Kim, Young-Ho and Chou, Diana and Lee, Bongshin and Danilovich, Margaret and Lazar, Amanda and Conroy, David E. and Kacorri, Hernisa and Choe, Eun Kyoung},
+  booktitle = {Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems},
+  year      = {2022},
+  doi       = {10.1145/3491102.3517457}
+}</pre>
+    </div>
+
+    <div class="paper-card is-imwut">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div>
+          <strong>[IMWUT 2025]</strong> Khayami, H., Wang, L., Kim, Y.-H., Lee, B., Conroy, D. E., Lazar, A., Choe, E. K., &amp; Kacorri, H. (2025).<br />
+          <em>From Verbal Reports to Personalized Activity Trackers: Understanding the Challenges of Ground Truth Data Collection with Older Adults in the Wild.</em><br />
+          IMWUT Vol. 9, No. 2, Article 38. <a href="../groundtruth-imwut25.pdf" target="_blank">PDF</a>
+        </div>
+        <button class="button is-small is-light" style="margin-left: 1rem; white-space: nowrap;" onclick="copyBibtex('bibtex-imwut25', this)">
+          <span class="icon"><i class="fas fa-copy"></i></span><span>BibTeX</span>
+        </button>
+      </div>
+      <pre id="bibtex-imwut25" class="bibtex-block">@article{khayami2025groundtruth,
+  title      = {From Verbal Reports to Personalized Activity Trackers: Understanding the Challenges of Ground Truth Data Collection with Older Adults in the Wild},
+  author     = {Khayami, Hossein and Wang, Lining and Kim, Young-Ho and Lee, Bongshin and Conroy, David E. and Lazar, Amanda and Choe, Eun Kyoung and Kacorri, Hernisa},
+  journal    = {Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies},
+  volume     = {9},
+  number     = {2},
+  articleno  = {38},
+  year       = {2025},
+  doi        = {10.1145/3731749}
+}</pre>
+    </div>
+  </div>
+</section>
+
+<!-- Study Protocol -->
+<section class="section" id="protocol" style="background-color: #fafafa;">
+  <div class="container">
+    <h2 class="section-title">Study Design &amp; Data Collection Protocol</h2>
+    <p>
+      The study was an in-the-wild deployment conducted in May–July 2021. Participants collected their own activity data in their natural home and community environments in the Northeast region of the United States. Due to COVID-19, all onboarding and debriefing sessions were held remotely via Zoom. Study equipment was delivered and picked up by a researcher.
+    </p>
+
+    <h3 class="title is-5" style="margin-top: 2rem;">Timeline</h3>
+
+    <table class="table dataset-table is-fullwidth is-striped is-hoverable" style="margin-top: 1rem;">
+      <thead>
+        <tr>
+          <th>Phase</th>
+          <th>Duration</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Introductory Session</strong></td>
+          <td>~45 min (Zoom)</td>
+          <td>Equipment setup, study overview, device configuration</td>
+        </tr>
+        <tr>
+          <td><strong>Adaptation Period</strong></td>
+          <td>4 days</td>
+          <td>Participants acclimate to wearing and charging devices; activity reporting feature disabled</td>
+        </tr>
+        <tr>
+          <td><strong>Tutorial Session</strong></td>
+          <td>~1 hr (Zoom)</td>
+          <td>Training on MyMove activity reporting; practice runs</td>
+        </tr>
+        <tr>
+          <td><strong>Data Collection</strong></td>
+          <td>7 days</td>
+          <td>Continuous smartwatch and thigh sensor wear; verbal activity reporting during waking hours</td>
+        </tr>
+        <tr>
+          <td><strong>Debriefing Interview</strong></td>
+          <td>40–70 min (Zoom)</td>
+          <td>Semi-structured interview on usability, experiences, and preferences</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="title is-5" style="margin-top: 2rem;">MyMove App Interface</h3>
+    <p>Participants reported activities using <strong>MyMove</strong>, a custom Android Wear app. They could initiate a report voluntarily or respond to an ESM prompt, describe their activity, duration, and effort level via speech, review the recording, and submit — all from the wrist.</p>
+    <figure class="image" style="margin-top: 1rem;">
+      <img src="figures/watchface.jpg" alt="MyMove watch interface screens" style="border-radius: 6px; max-width: 60%; display: block; margin: 0 auto;" />
+    </figure>
+
+    <h3 class="title is-5" style="margin-top: 2.5rem;">Labeling Pipeline</h3>
+    <p>Verbal reports and thigh-worn sensor data were triangulated to produce consensus activity labels. The figure below illustrates how data from both sources flows through the labeling pipeline.</p>
+    <figure class="image" style="margin-top: 1rem;">
+      <img src="figures/sys_overview_labeling.jpg" alt="Labeling pipeline overview" style="border-radius: 6px; max-width: 60%; display: block; margin: 0 auto;" />
+    </figure>
+  </div>
+</section>
+
+<!-- Sensors -->
+<section class="section" id="sensors">
+  <div class="container">
+    <h2 class="section-title">Raw Sensor Data</h2>
+
+    <h3 class="title is-5">Smartwatch IMU (via MyMove App)</h3>
+    <p style="margin-bottom: 1rem;">Each record corresponds to one 60-second window. IMU signals are recorded as a 10-second burst at 50 Hz every minute.</p>
+    <table class="table dataset-table is-fullwidth is-striped is-hoverable">
+      <thead>
+        <tr>
+          <th>Sensor</th>
+          <th>Signal</th>
+          <th>Rate</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Linear Acceleration</td>
+          <td>(m/s², x, y, z) — gravity removed</td>
+          <td>50 Hz (~500 samples/min)</td>
+          <td>10-sec window recorded every minute</td>
+        </tr>
+        <tr>
+          <td>Gravity</td>
+          <td>(m/s², x, y, z), norm ≈ 9.81</td>
+          <td>50 Hz (~500 samples/min)</td>
+          <td>10-sec window recorded every minute</td>
+        </tr>
+        <tr>
+          <td>Rotation Vector</td>
+          <td>Device orientation quaternion (x, y, z, w)</td>
+          <td>50 Hz (~500 samples/min)</td>
+          <td>10-sec window recorded every minute</td>
+        </tr>
+        <tr>
+          <td>Magnetometer</td>
+          <td>Magnetic field (µT, x, y, z)</td>
+          <td>50 Hz (~500 samples/min)</td>
+          <td>Present in most but not all minute-records</td>
+        </tr>
+        <tr>
+          <td>Heart Rate</td>
+          <td>BPM</td>
+          <td>Variable</td>
+          <td>Present intermittently, not in every minute-record</td>
+        </tr>
+        <tr>
+          <td>Step Count</td>
+          <td>Steps per minute</td>
+          <td>1-minute bins</td>
+          <td>Built-in smartwatch pedometer</td>
+        </tr>
+        <tr>
+          <td>Google Activity Recognition</td>
+          <td>Activity label + confidence (0–100)</td>
+          <td>1-minute bins</td>
+          <td>Still, Walking, Running, On_Foot, On_Bicycle, In_Vehicle, Tilting, Unknown; excluded when watch not worn</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="is-size-7 has-text-grey" style="margin-top: 0.5rem;">
+      <em>Note: Total (raw) acceleration, as commonly used in HAR datasets, equals Linear Acceleration + Gravity and can be reconstructed by summing the two signals above.</em>
+    </p>
+    <p class="is-size-7 has-text-grey"><em>Data format: Protocol Buffers, stored on-watch and uploaded to a MySQL database via the companion phone's Wi-Fi.</em></p>
+
+    <h3 class="title is-5" style="margin-top: 2.5rem;">activPAL4 Thigh-Worn Sensor</h3>
+    <table class="table dataset-table is-fullwidth is-striped is-hoverable">
+      <thead>
+        <tr><th>Spec</th><th>Detail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Model</td><td>activPAL4 (PAL Technologies Ltd.)</td></tr>
+        <tr><td>Sensors</td><td>3-axis accelerometer</td></tr>
+        <tr><td>Placement</td><td>Midline of the thigh between knee and hip</td></tr>
+        <tr><td>Worn</td><td>24/7 (continuous, including sleep)</td></tr>
+        <tr><td>Battery life</td><td>&gt;3 weeks</td></tr>
+        <tr><td>Outputs</td><td>Activity class, duration, step count per minute (SPM), MET values</td></tr>
+        <tr><td>Activity classes</td><td>Stepping, Sitting, Sitting in transport, Lying, Standing, In Vehicle, Biking</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="title is-5" style="margin-top: 2.5rem;">Verbal Reports</h3>
+    <table class="table dataset-table is-fullwidth is-striped is-hoverable">
+      <thead>
+        <tr><th>Parameter</th><th>Detail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Format</td><td>Free-form speech recordings</td></tr>
+        <tr><td>Max duration</td><td>2 minutes per recording</td></tr>
+        <tr><td>Average length</td><td>18.65 sec (SD = 13.65)</td></tr>
+        <tr><td>Average word count</td><td>32.05 words (SD = 26.15)</td></tr>
+        <tr><td>Transcription</td><td>Manual; Microsoft Cognitive Speech WER: 4.93%, Google Cloud Speech WER: 8.50%</td></tr>
+      </tbody>
+    </table>
+    <p class="is-size-7 has-text-grey" style="margin-top: 0.5rem;"><em>Note: Audio files are not included in the public release due to privacy concerns.</em></p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>MyMove Dataset</strong> · <a href="https://mymove-collective.github.io/">mymove-collective.github.io</a>
+    </p>
+    <p style="font-size: 0.85rem; color: #888;">
+      Page template inspired by <a href="https://nerfies.github.io/" target="_blank">Nerfies</a>.
+    </p>
+  </div>
+</footer>
+
+<script>
+  function copyBibtex(id, btn) {
+    const block = document.getElementById(id);
+    block.classList.toggle('is-visible');
+    if (block.classList.contains('is-visible')) {
+      navigator.clipboard.writeText(block.innerText).then(() => {
+        btn.querySelector('span:last-child').textContent = 'Copied!';
+        setTimeout(() => btn.querySelector('span:last-child').textContent = 'BibTeX', 2000);
+      });
+    } else {
+      btn.querySelector('span:last-child').textContent = 'BibTeX';
+    }
+  }
+</script>
+</body>
+</html>

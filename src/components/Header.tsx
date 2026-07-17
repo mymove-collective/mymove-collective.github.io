@@ -11,6 +11,7 @@ export const Header = () => {
 
             <div className="flex-fill" />
 
+            <a className="gnb-link" href="/dataset/">Dataset</a>
 
             <a className="github" href="https://github.com/muclipse/data-at-hand-mobile" target="_blank" hidden={true}>
                 <div>

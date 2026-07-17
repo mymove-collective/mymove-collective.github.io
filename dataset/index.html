@@ -91,6 +91,7 @@
         <a class="navbar-item" href="#protocol">Protocol</a>
         <a class="navbar-item" href="#participants">Participants</a>
         <a class="navbar-item" href="#sensors">Sensors</a>
+        <a class="navbar-item" href="#visualization">Visualization</a>
         <a class="navbar-item" href="#download">Download</a>
       </div>
     </div>
@@ -453,6 +454,42 @@
       </tbody>
     </table>
     <p class="is-size-7 has-text-grey" style="margin-top: 0.5rem;"><em>Note: Audio files are not included in the public release due to privacy concerns.</em></p>
+  </div>
+</section>
+
+<!-- Visualization -->
+<section class="section" id="visualization" style="background-color: #fafafa;">
+  <div class="container">
+    <h2 class="section-title">Data Visualization</h2>
+    <!-- IMU sample -->
+    <h3 class="title is-5" style="margin-top: 1rem;">IMU Signal Samples</h3>
+    <p>
+      One 10-second window of all four IMU signals — linear acceleration, gravity, rotation vector, and magnetometer — recorded from the smartwatch during five representative activities: lying, sitting, standing, walking, and running.
+    </p>
+    <figure class="image" style="margin-top: 1rem;">
+      <img src="figures/mymove_raw_sensors_sample.png" alt="Sample IMU sensor readings for five activities" style="border-radius: 6px; display: block; margin: 0 auto;" />
+    </figure>
+    <p class="is-size-7 has-text-grey has-text-centered" style="margin-top: 0.5rem;">
+      <em>Raw IMU sensor readings across five activities (lying, sitting, standing, walking, running).</em>
+    </p>
+
+    <!-- Activity timeline -->
+    <h3 class="title is-5" style="margin-top: 2.5rem;">Verbal Reports Aligned with Sensor Data</h3>
+    <p>
+      Examples of verbally reported activity segments aligned with activPAL posture classifications and smartwatch step counts over time.
+    </p>
+    <figure class="image" style="margin-top: 1rem;">
+      <img src="figures/timeline.jpg" alt="Verbal report timeline aligned with activPAL and step count" style="border-radius: 6px; display: block; margin: 0 auto;" />
+    </figure>
+
+    <!-- Stepping cadence -->
+    <h3 class="title is-5" style="margin-top: 2.5rem;">Personalized Stepping Intensity</h3>
+    <p>
+      Stepping cadence distribution for one participant (P13), showing distinct peaks corresponding to low, moderate, and vigorous stepping intensities. Thresholds vary across individuals and require personalization.
+    </p>
+    <figure class="image" style="margin-top: 1rem;">
+      <img src="figures/walking-running-P13.jpg" alt="Stepping cadence distribution for P13" style="border-radius: 6px; display: block; margin: 0 auto; max-width: 70%;" />
+    </figure>
   </div>
 </section>
 
